@@ -6,6 +6,8 @@ import Demola from './Components/Demola';
 import Person from './Components/Person';
 import PersonList from './Components/PersonList';
 import { Button } from './Components/Button';
+import { Input } from './Components/Input';
+
 
 
 
@@ -43,9 +45,9 @@ function App() {
   
    let name = 'loading'
 
-   const handleClick = () => {
-       return console.log("am so good")
-   }
+  
+
+
 
   return (
     <div className="App">
@@ -56,7 +58,12 @@ function App() {
       <Oscar>
       <Heading> Placeholder Text</Heading>
       </Oscar>
-      <Button handleClick={handleClick}></Button>
+      <Button handleClick={(event , id) => {
+        console.log('Button clicked' , event , id)
+      }}></Button>
+      <Input  handleChange={(e) => {
+        console.log(e)
+      }} value = '' />
     </div>
   );
 }

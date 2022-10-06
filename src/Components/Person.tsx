@@ -1,12 +1,5 @@
-import React from 'react'
 
-type personProps = {
-	name : {
-		firstname : string,
-		lastname : string
-	}
-	
-}
+import { personProps } from './Typee/Person.type'
 
 const Person = (props : personProps) => {
   return (

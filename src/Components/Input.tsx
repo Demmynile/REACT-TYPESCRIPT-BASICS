@@ -6,9 +6,9 @@ import React, { ChangeEvent } from "react"
  }
 
 
-export const Input = (props : InputProps) => {
-	const handleChangeEvent = (e : ChangeEvent<HTMLInputElement>) =>  {
-          console.log(e.target.value)
-	}
-	return <input type = 'text' value = {props.value} onChange={handleChangeEvent } />
+export const Input = ({value , handleChange} : InputProps) => {
+	// const handleChangeEvent = (e : ChangeEvent<HTMLInputElement>) =>  {
+    //       console.log(e.target.value)
+	// }
+	return <input type = 'text' value = {value} onChange={handleChange} />
 }
